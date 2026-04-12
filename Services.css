@@ -1,0 +1,218 @@
+.services-page { padding: 72px 0 80px; }
+
+.services-page__headline {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.services-page__sub {
+  font-size: 15px;
+  color: var(--gray-mid);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 64px;
+}
+
+/* ── Main service rows ── */
+.services-page__list { display: flex; flex-direction: column; }
+
+.services-page__item {
+  display: grid;
+  grid-template-columns: 280px 1fr auto;
+  gap: 48px;
+  align-items: start;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.services-page__item:last-child { border-bottom: 1px solid var(--border); }
+
+.services-page__item-num {
+  font-size: 11px;
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.06em;
+}
+
+.services-page__item-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.services-page__item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.services-page__item-tag {
+  padding: 5px 14px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-mid);
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.services-page__item:hover .services-page__item-tag {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.services-page__item-desc {
+  font-size: 14px;
+  color: var(--gray-mid);
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+.services-page__item-arrow {
+  font-size: 20px;
+  color: var(--gray-mid);
+  margin-top: 4px;
+  transition: transform 0.2s, color 0.2s;
+}
+.services-page__item:hover .services-page__item-arrow {
+  transform: translate(4px, -4px);
+  color: var(--orange);
+}
+
+/* ── Process section ── */
+.services-process { padding: 80px 0; background: var(--gray-light); }
+
+.services-process__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.services-process__sub {
+  font-size: 14px;
+  color: var(--gray-mid);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 56px;
+}
+
+.services-process__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.services-process__step {
+  background: var(--white);
+  padding: 32px 28px;
+}
+
+.services-process__step-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--orange);
+  opacity: 0.25;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.services-process__step-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.services-process__step-desc {
+  font-size: 13px;
+  color: var(--gray-mid);
+  line-height: 1.7;
+}
+
+/* ── Why Grownex ── */
+.services-why { padding: 80px 0; }
+
+.services-why__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.services-why__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.services-why__text {
+  font-size: 14px;
+  color: var(--gray-mid);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.services-why__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.services-why__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.2s;
+}
+.services-why__list-item:hover { border-color: var(--orange); }
+
+.services-why__list-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.services-why__list-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.services-why__list-desc {
+  font-size: 13px;
+  color: var(--gray-mid);
+  line-height: 1.6;
+}
+
+.services-why__img {
+  border-radius: 16px;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-page__item { grid-template-columns: 1fr; gap: 16px; }
+  .services-process__grid { grid-template-columns: repeat(2, 1fr); }
+  .services-why__grid { grid-template-columns: 1fr; gap: 40px; }
+}

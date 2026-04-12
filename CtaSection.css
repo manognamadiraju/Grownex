@@ -1,0 +1,34 @@
+.cta { background: var(--orange); padding: 80px 0; }
+.cta__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.cta__title { font-family: var(--font-display); font-size: clamp(36px,4vw,56px); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 24px; }
+.cta__title em { font-style: italic; }
+.cta__desc { font-size: 14px; color: rgba(255,255,255,0.8); max-width: 340px; line-height: 1.7; margin-bottom: 32px; }
+.cta__contact-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 20px; }
+.cta__contact-icon { font-size: 16px; color: var(--white); }
+.cta__contact-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.06em; }
+.cta__contact-val { font-size: 13px; color: var(--white); line-height: 1.5; }
+.cta__form { display: flex; flex-direction: column; }
+.cta__input {
+  background: none; border: none; border-bottom: 1px solid rgba(255,255,255,0.3);
+  color: var(--white); font-size: 14px; font-family: var(--font-body);
+  padding: 16px 0; outline: none; margin-bottom: 4px;
+}
+.cta__input::placeholder { color: rgba(255,255,255,0.5); }
+.cta__input:focus { border-bottom-color: var(--white); }
+.cta__textarea {
+  background: none; border: none; border-bottom: 1px solid rgba(255,255,255,0.3);
+  color: var(--white); font-size: 14px; font-family: var(--font-body);
+  padding: 16px 0; outline: none; resize: none; min-height: 80px;
+}
+.cta__textarea::placeholder { color: rgba(255,255,255,0.5); }
+.cta__submit {
+  margin-top: 24px; align-self: flex-start;
+  background: var(--white); color: var(--black); border: none; border-radius: 50px;
+  padding: 13px 28px; font-size: 14px; font-weight: 700;
+  cursor: pointer; font-family: var(--font-body);
+  display: flex; align-items: center; gap: 8px; transition: opacity 0.2s;
+}
+.cta__submit:hover { opacity: 0.9; }
+.cta__terms { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 12px; }
+.cta__terms a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+@media (max-width: 768px) { .cta__inner { grid-template-columns: 1fr; gap: 40px; } }

@@ -1,0 +1,19 @@
+.footer { background: var(--black); color: var(--white); padding: 60px 0 0; }
+.footer__top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; margin-bottom: 48px; }
+.footer__logo { margin-bottom: 12px; }
+.footer__tagline { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; max-width: 260px; }
+.footer__col-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 16px; }
+.footer__nav-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer__nav-list li a { font-size: 14px; color: rgba(255,255,255,0.8); text-decoration: none; cursor: pointer; transition: color 0.2s; }
+.footer__nav-list li a:hover { color: var(--orange); }
+.footer__bar { border-top: 1px solid rgba(255,255,255,0.08); padding: 24px 0; }
+.footer__bar-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; margin-bottom: 20px; }
+.footer__bar-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--orange); margin-bottom: 6px; }
+.footer__bar-val { font-size: 13px; color: rgba(255,255,255,0.65); }
+.footer__copy { display: flex; justify-content: space-between; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer__copy span { font-size: 11px; color: rgba(255,255,255,0.28); }
+@media (max-width: 768px) {
+  .footer__top { grid-template-columns: 1fr; gap: 32px; }
+  .footer__bar-grid { grid-template-columns: repeat(2,1fr); }
+  .footer__copy { flex-direction: column; gap: 6px; }
+}

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Inter:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #E8460A;
+  --black: #0A0A0A;
+  --white: #FFFFFF;
+  --gray-light: #F5F5F5;
+  --gray-mid: #888888;
+  --gray-dark: #1A1A1A;
+  --border: #E0E0E0;
+  --font-display: 'Bricolage Grotesque', 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 14px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.dot-orange { color: var(--orange); }
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: 13px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-primary:hover { opacity: 0.88; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--black);
+  border: 1.5px solid var(--black);
+  border-radius: 50px;
+  padding: 13px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-outline:hover { background: var(--black); color: var(--white); }
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+}
