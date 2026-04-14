@@ -1,6 +1,6 @@
 import "./Navbar.css";
-import GrownexLogo from "./GrownexLogo";
-import { NAV_LINKS } from "../data/constants";
+import GrownexLogo from "./GrownexLogo.jsx";
+import { NAV_LINKS } from "../data/constants.js";
 
 export default function Navbar({ currentPage, onNav }) {
   return (
@@ -11,8 +11,8 @@ export default function Navbar({ currentPage, onNav }) {
         </div>
         <ul className="nav__links">
           {NAV_LINKS.map((link) => (
-            <li key={link}>
-              <a onClick={() => onNav(link)} className={currentPage === link ? "active" : ""}>{link}</a>
+            <li key={link.name}>
+              <a onClick={() => onNav(link.name)} className={currentPage === link.name ? "active" : ""}>{link.name}</a>
             </li>
           ))}
         </ul>

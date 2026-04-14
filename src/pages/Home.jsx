@@ -1,12 +1,13 @@
 import "./Home.css";
-import CtaSection from "../components/CtaSection";
-import Footer from "../components/Footer";
-import { MARQUEE_ITEMS, WORK_ITEMS, SERVICES_HOME, VIDEO_THUMBS } from "../data/constants";
+import CtaSection from "../components/CtaSection.jsx";
+import Footer from "../components/Footer.jsx";
+import { MARQUEE_ITEMS, WORK_ITEMS, SERVICES_HOME, VIDEO_THUMBS } from "../data/constants.js";
 
 const WHY_POINTS = ["Strategic clarity in every engagement","Innovation-driven creative solutions","Customer-centric approach","Building stronger market presence"];
 
 export default function Home({ onNav }) {
   const doubled = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
+  
   return (
     <>
       <section className="hero">

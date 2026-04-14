@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./index.css";
-import Navbar            from "./components/Navbar";
-import Home              from "./pages/Home";
-import About             from "./pages/About";
-import Work from "./pages/Work";
-import Contact           from "./pages/Contact";
-import Insights          from "./pages/Insights";
-import CaseStudyBranding from "./pages/CaseStudyBranding";
-import CaseStudyDM from "./pages/CaseStudyDM";
-import Services from "./pages/Services";
+import Navbar            from "./components/Navbar.jsx";
+import Home              from "./pages/Home.jsx";
+import About             from "./pages/About.jsx";
+import Work              from "./pages/Work.jsx";
+import Contact           from "./pages/Contact.jsx";
+import Insights          from "./pages/Insights.jsx";
+import CaseStudyBranding from "./pages/CaseStudyBranding.jsx";
+import CaseStudyDM       from "./pages/CaseStudyDM.jsx";
+import Services          from "./pages/Services.jsx";
 
 
 export default function App() {
@@ -36,7 +36,7 @@ export default function App() {
   return (
     <>
       <Navbar currentPage={page} onNav={onNav} />
-      <main>{renderPage()}</main>
+      <main style={{ minHeight: "100vh" }}>{renderPage()}</main>
     </>
   );
 }

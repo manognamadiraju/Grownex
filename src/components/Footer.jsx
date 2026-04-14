@@ -1,5 +1,5 @@
 import "./Footer.css";
-import GrownexLogo from "./GrownexLogo";
+import GrownexLogo from "./GrownexLogo.jsx";
 
 const NAV_COL = ["Home","About Us","Portfolio","Services","Contact"];
 const SOCIAL_COL = ["LinkedIn","Facebook","Instagram"];

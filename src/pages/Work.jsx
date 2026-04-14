@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Work.css";
-import CtaSection from "../components/CtaSection";
-import Footer from "../components/Footer";
-import { WORK_ITEMS, DELIVER_ITEMS, VIDEO_THUMBS } from "../data/constants";
+import CtaSection from "../components/CtaSection.jsx";
+import Footer from "../components/Footer.jsx";
+import { WORK_ITEMS, DELIVER_ITEMS, VIDEO_THUMBS } from "../data/constants.js";
 
 function BrandingTab({ onNav }) {
   return (

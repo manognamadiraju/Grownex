@@ -1,7 +1,7 @@
 import "./Insights.css";
-import CtaSection from "../components/CtaSection";
-import Footer from "../components/Footer";
-import { INSIGHT_POSTS } from "../data/constants";
+import CtaSection from "../components/CtaSection.jsx";
+import Footer from "../components/Footer.jsx";
+import { INSIGHT_POSTS } from "../data/constants.js";
 
 export default function Insights({ onNav }) {
   return (

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./About.css";
-import CtaSection from "../components/CtaSection";
-import Footer from "../components/Footer";
-import { CAPABILITIES } from "../data/constants";
+import CtaSection from "../components/CtaSection.jsx";
+import Footer from "../components/Footer.jsx";
+import { CAPABILITIES } from "../data/constants.js";
 
 const MISSION_POINTS = ["Strategic clarity in every engagement","Innovation-driven creative solutions","Customer-centric approach","Building stronger market presence"];
 const VISION_POINTS = ["Inspiring modern brand architecture","Pioneering digital-first strategies","Championing measurable outcomes","Empowering ambitious businesses"];

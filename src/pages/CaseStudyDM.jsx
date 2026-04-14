@@ -1,6 +1,6 @@
 import "./CaseStudyDM.css";
-import CtaSection from "../components/CtaSection";
-import Footer from "../components/Footer";
+import CtaSection from "../components/CtaSection.jsx";
+import Footer from "../components/Footer.jsx";
 
 const META = [
   { label:"Client",   val:"Aruh Koncepts" },
