@@ -1,12 +1,15 @@
 import "./Home.css";
 import CtaSection from "../components/CtaSection.jsx";
 import Footer from "../components/Footer.jsx";
-import { MARQUEE_ITEMS, WORK_ITEMS, SERVICES_HOME, VIDEO_THUMBS, VIDEO_POSTERS, TEAM_PHOTO, MARKETING_ITEMS } from "../data/constants.js";
+import { MARQUEE_ITEMS, WORK_ITEMS, SERVICES_HOME, VIDEO_THUMBS, VIDEO_POSTERS, TEAM_PHOTO, MARKETING_ITEMS, CARASOUL_IMAGES } from "../data/constants.js";
 
 const WHY_POINTS = ["Strategic clarity in every engagement","Innovation-driven creative solutions","Customer-centric approach","Building stronger market presence"];
 
 export default function Home({ onNav }) {
-  const doubled = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
+  const carouselImagesDoubled = [
+    ...CARASOUL_IMAGES.sort(() => Math.random() - 0.5), 
+    ...CARASOUL_IMAGES.sort(() => Math.random() - 0.5)
+  ];
   
   return (
     <>
@@ -19,9 +22,13 @@ export default function Home({ onNav }) {
             <button className="btn-outline" onClick={() => onNav("About Us")}>Start a conversation</button>
             <button className="btn-primary" onClick={() => onNav("Work")}>View our work ↗</button>
           </div>
-          <div className="hero__marquee">
-            <div className="hero__marquee-track">
-              {doubled.map((text, i) => <span key={i}>{text}</span>)}
+          <div className="hero__carousel">
+            <div className="hero__carousel-track">
+              {carouselImagesDoubled.map((img, i) => (
+                <div key={i} className="hero__carousel-item">
+                  <img src={img} alt={`Portfolio ${i + 1}`} />
+                </div>
+              ))}
             </div>
           </div>
         </div>

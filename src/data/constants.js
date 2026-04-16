@@ -4,14 +4,36 @@
 export const MEDIA = {
   images: {
     sowjanyaBrand: "https://ik.imagekit.io/2miis5uuw/sowjanya%20brand%20guideline-04.jpg.jpeg?updatedAt=1776354292262",
+    sowjanyaBrand2 : "https://ik.imagekit.io/2miis5uuw/sowjanya%20brand%20guideline-01.jpg.jpeg?updatedAt=1776354289048",
+    sowjanyaBrand3 : "https://ik.imagekit.io/2miis5uuw/sowjanya%20brand%20guideline-01.jpg.jpeg?updatedAt=1776354289048",
+    sowjanyaBrand4 : "https://ik.imagekit.io/2miis5uuw/sowjanya%20brand%20guideline-02.jpg.jpeg?updatedAt=1776354286287",
+    sowjanyaBrand5 : "https://ik.imagekit.io/2miis5uuw/sowjanya%20brand%20guideline-03.jpg.jpeg?updatedAt=1776354286184",
     c2a: "https://ik.imagekit.io/2miis5uuw/C2A%20INSTA%20POST%20(1)-01.jpg.jpeg?updatedAt=1776177819358",
     mastersAbroad: "https://ik.imagekit.io/2miis5uuw/masters%20abroard%20insta%20ad-05.jpg.jpeg?updatedAt=1776177828626",
+    mastersAbroad2: "https://ik.imagekit.io/2miis5uuw/masters%20abroard%20insta%20ad-03.jpg.jpeg?updatedAt=1776177822740",
+    mastersAbroad3:"https://ik.imagekit.io/2miis5uuw/masters%20abroard%20insta%20ad-04.jpg.jpeg?updatedAt=1776177819553",
+    mastersAbroad4: "https://ik.imagekit.io/2miis5uuw/masters%20abroard%20insta%20ad-01.jpg.jpeg?updatedAt=1776177814656",
+    mastersAbroad5: "https://ik.imagekit.io/2miis5uuw/masters%20abroard%20insta%20ad-08.jpg.jpeg?updatedAt=1776177806516",
+    mastersAbroad6: "https://ik.imagekit.io/2miis5uuw/masters%20abroard%20insta%20ad-02.jpg.jpeg?updatedAt=1776177806160",
     teamPhoto: "https://ik.imagekit.io/2miis5uuw/IMG_3081%20(1)%20(1).jpg%20(1).jpeg?updatedAt=1776177817224",
   },
   videos: {
     sampleVideo: "https://ik.imagekit.io/2miis5uuw/sample-video.mp4?updatedAt=1776093938641",
   },
 };
+
+export const CARASOUL_IMAGES = [
+  MEDIA.images.mastersAbroad,
+  MEDIA.images.mastersAbroad3,
+  MEDIA.images.mastersAbroad4,
+  MEDIA.images.mastersAbroad5,
+  MEDIA.images.mastersAbroad6,
+  MEDIA.images.c2a,
+  MEDIA.images.sowjanyaBrand,
+  MEDIA.images.sowjanyaBrand2,
+  MEDIA.images.sowjanyaBrand4,
+  MEDIA.images.sowjanyaBrand5,
+]
 
 export const NAV_LINKS = [
   { name: "Home", href: "#" },
