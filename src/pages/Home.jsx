@@ -1,7 +1,7 @@
 import "./Home.css";
 import CtaSection from "../components/CtaSection.jsx";
 import Footer from "../components/Footer.jsx";
-import { MARQUEE_ITEMS, WORK_ITEMS, SERVICES_HOME, VIDEO_THUMBS } from "../data/constants.js";
+import { MARQUEE_ITEMS, WORK_ITEMS, SERVICES_HOME, VIDEO_THUMBS, VIDEO_POSTERS, TEAM_PHOTO, MARKETING_ITEMS } from "../data/constants.js";
 
 const WHY_POINTS = ["Strategic clarity in every engagement","Innovation-driven creative solutions","Customer-centric approach","Building stronger market presence"];
 
@@ -33,11 +33,14 @@ export default function Home({ onNav }) {
           <p className="home-work__section-label" style={{ marginTop: 24 }}>Branding</p>
           <div className="home-work__grid">
             {WORK_ITEMS.map((w) => (
-              <div key={w.id} className="home-work__card" onClick={() => onNav(w.page)}>
-                <div className={`home-work__card-bg ${w.colorClass}`} />
+              <div key={w.id} className="home-work__card" onClick={() => w.page && onNav(w.page)}>
+                {w.image ? (
+                  <img src={w.image} alt={w.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                ) : (
+                  <div className={`home-work__card-bg ${w.colorClass}`} />
+                )}
                 <div className="home-work__card-overlay" />
                 <div className="home-work__card-content">
-                  <span className="home-work__card-tag">{w.tag}</span>
                   <div className="home-work__card-name">{w.name}</div>
                   <div className="home-work__card-sub">{w.sub}</div>
                 </div>
@@ -46,13 +49,13 @@ export default function Home({ onNav }) {
             ))}
           </div>
           <p className="home-work__section-label" style={{ marginTop: 48 }}>Marketing</p>
-          {[1, 2].map((i) => (
-            <div key={i} className="home-dm__card" onClick={() => onNav("CaseStudy-DM")}>
+          {MARKETING_ITEMS.map((m) => (
+            <div key={m.id} className="home-dm__card" onClick={() => onNav(m.page)}>
               <div className="home-dm__card-bg" />
               <div className="home-dm__card-overlay" />
               <div className="home-dm__card-content">
-                <div className="home-dm__card-title">Aruh Koncepts</div>
-                <div className="home-dm__card-sub">Digital Marketing</div>
+                <div className="home-dm__card-title">{m.name}</div>
+                <div className="home-dm__card-sub">{m.sub}</div>
               </div>
               <span className="home-dm__card-link">View casestudy →</span>
             </div>
@@ -68,8 +71,11 @@ export default function Home({ onNav }) {
           <p className="home-video__title">Video Production</p>
           <p className="home-video__sub">All these visuals and concepts are made by Grownex that shows its world.</p>
           <div className="home-video__grid">
-            {VIDEO_THUMBS.map((emoji, i) => (
-              <div key={i} className="home-video__thumb" style={{ background: i % 2 === 0 ? "#111" : "#1a1a1a" }}>{emoji}</div>
+            {VIDEO_THUMBS.map((videoUrl, i) => (
+              <video key={i} className="home-video__thumb" controls poster={VIDEO_POSTERS[i]} style={{ width: "100%", background: "#111" }}>
+                <source src={videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             ))}
           </div>
         </div>
@@ -98,7 +104,9 @@ export default function Home({ onNav }) {
             Independent thinking. Direct accountability. Real-world results.
           </h2>
           <div className="home-why__body">
-            <div className="home-why__img">Team Photo</div>
+            <div className="home-why__img">
+              <img src={TEAM_PHOTO} alt="Team Photo" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </div>
             <div>
               <p className="home-why__subtitle">What Our Clients Can Expect</p>
               <p className="home-why__text">Engagements built on trust, clear communication, and a deep understanding of your goals. Every decision is backed by thinking — not templates.</p>

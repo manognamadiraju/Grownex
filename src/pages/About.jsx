@@ -2,14 +2,18 @@ import { useState } from "react";
 import "./About.css";
 import CtaSection from "../components/CtaSection.jsx";
 import Footer from "../components/Footer.jsx";
-import { CAPABILITIES } from "../data/constants.js";
+import { CAPABILITIES, TEAM_PHOTO } from "../data/constants.js";
 
 const MISSION_POINTS = ["Strategic clarity in every engagement","Innovation-driven creative solutions","Customer-centric approach","Building stronger market presence"];
 const VISION_POINTS = ["Inspiring modern brand architecture","Pioneering digital-first strategies","Championing measurable outcomes","Empowering ambitious businesses"];
 
+const getPrevIdx = (i, arr) => (i === 0 ? arr.length - 1 : i - 1);
+const getNextIdx = (i, arr) => (i === arr.length - 1 ? 0 : i + 1);
+
 export default function About({ onNav }) {
   const [capIdx, setCapIdx] = useState(0);
   const cap = CAPABILITIES[capIdx];
+
   return (
     <>
       <section className="about-hero">
@@ -22,7 +26,9 @@ export default function About({ onNav }) {
               <p className="about-hero__text">Not marketing that looks impressive in decks, but systems that generate pipeline, acquire customers, and accelerate growth.</p>
               <p className="about-hero__text">With a team of skilled professionals and a commitment to quality, we work hand-in-hand with our clients to bring their ideas to life.</p>
             </div>
-            <div className="about-hero__img">Team photo — Grownex</div>
+            <div className="about-hero__img">
+              <img src={TEAM_PHOTO} alt="Team Photo" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </div>
           </div>
         </div>
       </section>
@@ -35,14 +41,20 @@ export default function About({ onNav }) {
             <p className="capabilities__desc">See how our full-spectrum capabilities transform your brand with custom solutions that deliver measurable impact from day one.</p>
           </div>
           <div className="capabilities__body">
-            <div className="capabilities__img">⌨️</div>
+            <div className="capabilities__img">
+              {cap.image ? (
+                <img src={cap.image} alt={cap.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              ) : (
+                "⌨️"
+              )}
+            </div>
             <div>
-              <p className="capabilities__num">{cap.num}</p>
+              <p className="capabilities__num">{cap.num} / </p>
               <h3 className="capabilities__name">{cap.name}</h3>
               <p className="capabilities__text">{cap.desc}</p>
               <div className="capabilities__nav">
-                <button className="capabilities__btn" onClick={() => setCapIdx(i => Math.max(0, i-1))}>‹</button>
-                <button className="capabilities__btn" onClick={() => setCapIdx(i => Math.min(CAPABILITIES.length-1, i+1))}>›</button>
+                <button className="capabilities__btn" onClick={() => setCapIdx(i => getPrevIdx(i, CAPABILITIES))}>‹</button>
+                <button className="capabilities__btn" onClick={() => setCapIdx(i => getNextIdx(i, CAPABILITIES))}>›</button>
                 <div className="capabilities__dots">
                   {CAPABILITIES.map((_,i) => (
                     <div key={i} className={`capabilities__dot${i===capIdx?" capabilities__dot--active":""}`} onClick={() => setCapIdx(i)} />

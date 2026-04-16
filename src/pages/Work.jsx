@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Work.css";
 import CtaSection from "../components/CtaSection.jsx";
 import Footer from "../components/Footer.jsx";
-import { WORK_ITEMS, DELIVER_ITEMS, VIDEO_THUMBS } from "../data/constants.js";
+import { WORK_ITEMS, DELIVER_ITEMS, VIDEO_THUMBS, VIDEO_POSTERS } from "../data/constants.js";
 
 function BrandingTab({ onNav }) {
   return (
@@ -48,7 +48,12 @@ function MarketingTab({ onNav }) {
         <p className="work-video__title">Video Production</p>
         <p className="work-video__sub">All these visuals and concepts are made by Grownex that shows its world.</p>
         <div className="work-video__grid">
-          {VIDEO_THUMBS.map((e, i) => <div key={i} className="work-video__thumb" style={{ background: i%2===0?"#111":"#1a1a1a" }}>{e}</div>)}
+          {VIDEO_THUMBS.map((videoUrl, i) => (
+            <video key={i} className="work-video__thumb" controls poster={VIDEO_POSTERS[i]} style={{ width: "100%", background: "#111" }}>
+              <source src={videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ))}
         </div>
       </div>
       <div className="work-deliver">

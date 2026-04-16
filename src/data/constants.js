@@ -1,5 +1,18 @@
 // Constants for the Grownex website
 
+// Media Assets
+export const MEDIA = {
+  images: {
+    sowjanyaBrand: "https://ik.imagekit.io/2miis5uuw/sowjanya%20brand%20guideline-04.jpg.jpeg?updatedAt=1776354292262",
+    c2a: "https://ik.imagekit.io/2miis5uuw/C2A%20INSTA%20POST%20(1)-01.jpg.jpeg?updatedAt=1776177819358",
+    mastersAbroad: "https://ik.imagekit.io/2miis5uuw/masters%20abroard%20insta%20ad-05.jpg.jpeg?updatedAt=1776177828626",
+    teamPhoto: "https://ik.imagekit.io/2miis5uuw/IMG_3081%20(1)%20(1).jpg%20(1).jpeg?updatedAt=1776177817224",
+  },
+  videos: {
+    sampleVideo: "https://ik.imagekit.io/2miis5uuw/sample-video.mp4?updatedAt=1776093938641",
+  },
+};
+
 export const NAV_LINKS = [
   { name: "Home", href: "#" },
   { name: "About Us", href: "#" },
@@ -20,23 +33,51 @@ export const WORK_ITEMS = [
   {
     id: 1,
     name: "Sowjanya Studios",
-    tag: "Brand Identity",
-    sub: "Fashion & Lifestyle Branding",
+    sub: "Brand Identity, Outdoor Marketing",
     year: "2024",
     colorClass: "branding-1",
     imgClass: "work-img-1",
     logo: "👗",
     page: "CaseStudy-Branding",
+    image: MEDIA.images.sowjanyaBrand,
   },
   {
     id: 2,
-    name: "Aruh Koncepts",
-    tag: "Digital Marketing",
-    sub: "Interior Design Marketing",
+    name: "C2A",
+    sub: "Brand Identity, Outdoor Marketing",
     year: "2025",
     colorClass: "branding-2",
     imgClass: "work-img-2",
     logo: "🏠",
+    image: MEDIA.images.c2a,
+  },
+  {
+    id: 3,
+    name: "MASTERSABROAD",
+    sub: "Brand Identity",
+    year: "2025",
+    colorClass: "branding-3",
+    imgClass: "work-img-3",
+    logo: "🏠",
+    image: MEDIA.images.mastersAbroad,
+  },
+  {
+    id: 4,
+    name: "MAYU INFRA",
+    sub: "Brand Identity, Outdoor Marketing",
+    year: "2025",
+    colorClass: "branding-4",
+    imgClass: "work-img-4",
+    logo: "🏠",
+    image: "",
+  },
+];
+
+export const MARKETING_ITEMS = [
+  {
+    id: 1,
+    name: "Aruh Koncepts",
+    sub: "Digital Marketing",
     page: "CaseStudy-DM",
   },
 ];
@@ -63,21 +104,64 @@ export const SERVICES_HOME = [
 ];
 
 export const VIDEO_THUMBS = [
-  "🎬",
-  "🎥", 
-  "📹",
-  "🎞",
+  MEDIA.videos.sampleVideo,
 ];
 
+export const VIDEO_POSTERS = [
+  "",
+];
+
+export const TEAM_PHOTO = MEDIA.images.teamPhoto;
+
 export const CAPABILITIES = [
-  "Brand Strategy",
-  "Logo & Visual Identity",
-  "Brand Guidelines",
-  "Packaging Design",
-  "Digital Marketing",
-  "Social Media Management",
-  "Content Creation",
-  "SEO Optimization",
+  {
+    num: "001",
+    name: "Brand Strategy & Identity",
+    desc: "Comprehensive brand development from strategic foundation through visual and verbal identity systems. We define positioning, articulate differentiation, establish messaging architecture, and create identity systems built for consistency and scale across all market touchpoints.",
+    image: "",
+  },
+  {
+    num: "002",
+    name: "Logo & Visual Identity",
+    desc: "Creating distinctive visual identities that capture your brand essence and stand out in the market with memorable and versatile logo systems.",
+    image: "",
+  },
+  {
+    num: "003",
+    name: "Brand Guidelines",
+    desc: "Establishing clear, comprehensive brand guidelines to ensure consistency across all touchpoints and maintain brand integrity.",
+    image: "",
+  },
+  {
+    num: "004",
+    name: "Packaging Design",
+    desc: "Designing packaging that not only looks great but also communicates your brand story effectively and stands out on shelves.",
+    image: "",
+  },
+  {
+    num: "005",
+    name: "Digital Marketing",
+    desc: "Strategic digital marketing campaigns designed to reach your audience and drive measurable results across multiple channels.",
+    image: "",
+  },
+  {
+    num: "006",
+    name: "Social Media Management",
+    desc: "Building and managing your social media presence to engage your audience and grow your community with authentic content.",
+    image: "",
+  },
+  {
+    num: "007",
+    name: "Content Creation",
+    desc: "Creating compelling content that tells your story and connects with your audience on a deeper level across all platforms.",
+    image: "",
+  },
+  {
+    num: "008",
+    name: "SEO Optimization",
+    desc: "Optimizing your digital presence to improve visibility and drive organic traffic to your platforms and websites.",
+    image: "",
+  },
 ];
 
 export const INSIGHT_POSTS = [
